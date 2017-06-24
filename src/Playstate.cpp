@@ -80,8 +80,10 @@ void Playstate::render(sf::RenderWindow* window) {
 
 	/// WORLD
 	world.render(window, player.getPosition(), text, output, mode==EDITOR);
-	
-	//world.renderPreview(window, text);
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::P)) {
+		world.renderPreview(window, text);
+	}
 
 	/// INVENTORY
 	text.setPosition(GOLD*2+20, 5);
@@ -150,7 +152,7 @@ void Playstate::render(sf::RenderWindow* window) {
 	window->draw(text);
 
 
-	renderPauseMenu(window);
+	renderPauseMenu(window, text);
 
 }
 

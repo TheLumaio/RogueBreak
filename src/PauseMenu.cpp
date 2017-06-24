@@ -4,13 +4,12 @@ bool PauseMenu_isPaused = false;
 sf::RenderWindow* PauseMenu_windowRef = nullptr;
 sf::RectangleShape PauseMenu_rect;
 sf::Font PauseMenu_font;
-sf::Text PauseMenu_text;
 
 void updatePauseMenu(float dt)
 {
 }
 
-void renderPauseMenu(sf::RenderWindow* window)
+void renderPauseMenu(sf::RenderWindow* window, sf::Text& PauseMenu_text)
 {
 	if (PauseMenu_windowRef == nullptr) {
 		PauseMenu_windowRef = window;

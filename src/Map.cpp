@@ -20,6 +20,7 @@ Map::Map() {
 			if (noise < 0.23) map[x][y].type = WATER;
 			if (noise < 0.1)  map[x][y].type = DEEPWATER;
 			if (noise > 0.6)  map[x][y].type = TREE;
+//			if (noise > 0.4 && noise < 0.5) map[x][y] = FLOOR;
 		}
 	}
 
@@ -201,6 +202,9 @@ void Map::renderPreview(sf::RenderWindow* window, sf::Text& text)
 				break;
 			case TREE:
 				shape.setFillColor(sf::Color{20, 100, 20});
+				break;
+			case FLOOR:
+				shape.setFillColor(sf::Color{75, 75, 75});
 				break;
 			}
 

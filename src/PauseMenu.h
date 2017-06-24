@@ -9,10 +9,9 @@ extern bool PauseMenu_isPaused;
 extern sf::RenderWindow* PauseMenu_windowRef;
 extern sf::RectangleShape PauseMenu_rect;
 extern sf::Font PauseMenu_font;
-extern sf::Text PauseMenu_text;
 
 void updatePauseMenu(float);
-void renderPauseMenu(sf::RenderWindow*);
+void renderPauseMenu(sf::RenderWindow*, sf::Text&);
 void keyPressedPauseMenu(sf::Keyboard::Key); 
 
 #endif
